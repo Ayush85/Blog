@@ -60,7 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 ROOT_URLCONF = 'Blog.urls'
 
 TEMPLATES = [
