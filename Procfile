@@ -1,1 +1,1 @@
-web: python manage.py runsever
+web: gunicorn Blog.wsgi --log-file -
