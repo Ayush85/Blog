@@ -20,6 +20,8 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls import url
+from django.views.static import serve
+
 urlpatterns = [
     path('' , include('home.urls')),
     
