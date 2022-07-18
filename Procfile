@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+web: python manage.py runsever
