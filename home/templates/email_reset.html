@@ -1,0 +1,13 @@
+<html>
+  <body>
+    {% autoescape off %} Welcome to Blogs Login Hello {{ name }} Please confirm
+    your email by clicking on the following link.
+    <a
+      href="http://{{ domain }}{% url 'change_password' token=token username=username %}"
+      >Click Here</a
+    >
+
+    Confirmation Link: http://{{ domain }}{% url 'change_password' uidb64=uid
+    token=token %} {% endautoescape %}
+  </body>
+</html>

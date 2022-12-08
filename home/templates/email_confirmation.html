@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+Welcome to Blogs Login
+
+Hello {{ name }}
+
+Please confirm your email by clicking on the following link.
+
+<a href="http://{{ domain }}{% url 'activate' token=token uidb64=uid %}">Confirmation Link: </a>
+
+{% endautoescape %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block start %}
+
+<div class="wrapper">
+  <div class="text-center mt-4 name">
+      Create Member Account
+  </div>
+  <form class="p-3 mt-3" form action="/signup" method="post" >
+    {% csrf_token %}
+      <div class="form-field d-flex align-items-center">
+        <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" required>
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <input type="text" name="fname" id="fname" placeholder="First Name" autocomplete="off" required>
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <input type="text" name="lname" id="lname" placeholder="Last Name" autocomplete="off" required>
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="off"required>
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <input type="password" name="pass1" id="pwd" placeholder="Password" autocomplete="off" required>
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <input type="password" name="pass2" id="pwd1" placeholder="Confirm Password" autocomplete="off" required>
+      </div>
+      <button class="btn mt-3 " type="submit">Sign up</button>
+  </form>
+  <div class="text text-center fs-6">
+      I have an account. <a href="{% url 'signin' %}">Sign in</a>
+  </div>
+</div>
+
+
+{% endblock %}
